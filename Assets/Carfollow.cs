@@ -15,7 +15,7 @@ public class Carfollow : MonoBehaviour
         float directionMultiplier = 1f;
         float reverseThreshold = -0.1f; // only flip camera if moving backward significantly
 
-        if (carRb != null && Vector3.Dot(target.forward, carRb.velocity) < reverseThreshold)
+        if (carRb != null && Vector3.Dot(target.forward, carRb.linearVelocity) < reverseThreshold)
         {
             directionMultiplier = -1f; // camera in front
         }
